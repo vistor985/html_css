@@ -1,0 +1,28 @@
+/* Class Selectors */
+.sporty {
+  color: red;
+}
+
+.casual {
+  color: blue;
+}
+
+.formal {
+  color: brown;
+}
+
+/* ID Selectors */
+#container {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 20px;
+}
+/* Multiple Styles */
+.sporty,
+.casual {
+  font-size: 35px;
+}
+/* Descedant Styles */
+/* #container p {
+  background: blue;
+} */

@@ -7,5 +7,49 @@
   </head>
   <body>
     <h1>HTML & CSS Sandbox - Checkboxes & Radio</h1>
+    <h1>Favorite programming languages</h1>
+    <form>
+      <label for="java">
+        <input type="checkbox" name="languages" id="java" disabled />Java
+      </label>
+      <label for="php">
+        <input type="checkbox" name="languages" id="php" />Php
+      </label>
+      <label for="javascript">
+        <input
+          type="checkbox"
+          name="languages"
+          id="javascript"
+          checked
+        />JavaScript
+      </label>
+    </form>
+    <h2>Product Size</h2>
+    <form>
+      <label for="small">
+        <input type="radio" name="size" id="small" value="small" />
+        Small
+      </label>
+      <label for="medium">
+        <input type="radio" name="size" id="medium" value="medium" checked />
+        Medium
+      </label>
+      <label for="large">
+        <input type="radio" name="size" id="large" value="large" />
+        Large
+      </label>
+      <br /><br />
+      <label for="text">text</label>
+      <input type="text" name="exp" id="exp" />
+      <br />
+      <label for="more">
+        <input type="radio" name="ext" id="more" value="more" />
+        more
+      </label>
+      <label for="more">
+        <input type="radio" name="ext" id="else" value="else" />
+        else
+      </label>
+    </form>
   </body>
 </html>
