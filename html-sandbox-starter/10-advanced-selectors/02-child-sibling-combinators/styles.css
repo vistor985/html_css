@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 2;
 }
 
@@ -22,12 +22,35 @@ body {
 */
 
 /* Get only paragraphs that are direct children of container */
+.container > p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 
 /* Get only unordered lists that are direct children of container */
+.container > ul {
+  list-style: none;
+}
 
 /* Get only links that are direct children of container */
+.container > a {
+  color: red;
+}
 
 /* Get the immidiate sibling link after h1 */
+/* 满足h1是.container的child(无需direct),且a必须为紧跟着h1的element */
+.container h1 + a {
+  color: green;
+  font-weight: bold;
+}
 
 /* Get all links that are siblings that come after h1 */
+/* 与h1同级的a,跟在h1后面的都生效，嵌进其他在子级的不生效 */
+.container h1 ~ a {
+  color: purple;
+}
 
+/* conbine use */
+.container > ul + div {
+  background: coral;
+}

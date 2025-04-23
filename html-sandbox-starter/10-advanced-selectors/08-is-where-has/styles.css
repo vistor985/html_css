@@ -7,10 +7,38 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .container {
   max-width: 600px;
   margin: 30px auto;
+}
+
+.container h1,
+.container h2,
+.container p {
+  color: red;
+}
+
+.container :is(h1, h2, p) {
+  color: blue;
+}
+
+a:is(:hover, :focus) {
+  background-color: pink;
+}
+
+/* 作用同但优先级低于：is() */
+.container :where(h1, h2, p) {
+  color: green;
+}
+
+/* 有.container h1 span这个结构存在，则整个container按该选择器生效 */
+.container:has(h1 span) {
+  color: red;
+}
+
+h1:has(+ h2) {
+  color: blue;
 }
