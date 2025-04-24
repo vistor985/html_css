@@ -19,4 +19,10 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 200px);
   grid-template-rows: repeat(3, 100px);
+  justify-content: space-evenly;
+  justify-items: stretch;
+  /* align-content: space-around;
+  align-items: end;
+  place-items: center;
+  place-content: space-around; */
 }
