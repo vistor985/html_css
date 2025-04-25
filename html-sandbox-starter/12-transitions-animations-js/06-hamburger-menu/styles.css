@@ -5,5 +5,104 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+
+  /* 水平方向超出屏幕外的部分隐藏 */
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.navbar {
+  background: lightblue;
+  padding: 1rem 2rem;
+  height: 80px;
+}
+
+.navbar .logo {
+  width: 50px;
+}
+
+.navbar-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .main-menu-list {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.navbar a:hover {
+  color: blue;
+}
+
+/* Mobile Menu */
+.navbar .mobile-menu-items {
+  /* 绝对位置，方便平移 */
+  position: absolute;
+
+  top: 80px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(154, 192, 204, 0.5);
+  text-align: center;
+  transition: transform 0.3s ease;
+
+  /* 移出屏幕外 */
+  transform: translateX(100%);
+}
+
+.navbar .mobile-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding-top: 300px;
+  gap: 2rem;
+  font-size: 1.2rem;
+}
+
+.navbar .mobile-menu-toggle {
+  cursor: pointer;
+}
+
+.navbar .mobile-menu-items.active {
+  /* 触发事件后将该块位置从之前被移出屏幕外重置回未移动前的绝对位置 */
+  transform: translateX(0);
+}
+
+.navbar .mobile-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar .main-menu {
+    /* 在不同屏幕大小下两个菜单分别显示其中一个 */
+    display: none;
+  }
+
+  .navbar .mobile-menu {
+    display: block;
+  }
 }
